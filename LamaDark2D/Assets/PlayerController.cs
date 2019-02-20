@@ -12,21 +12,14 @@ public class PlayerController : MonoBehaviour
 
     public float speed;
 
-    private Rigidbody2D rb;
-    private Vector2 moveVelocity;
-
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
-
         timer += Time.deltaTime;
 
         if (timer >= 0.15f)
@@ -71,13 +64,12 @@ public class PlayerController : MonoBehaviour
             timer = 0;
         }
 
-    }
-
-    void FixedUpdate()
-    {
         if (player.IsAlive)
         {
-            rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+            //player.Cube.transform.Translate(10 * Input.GetAxis(player.x) * Time.deltaTime, 0f, 10 * Input.GetAxis(player.y) * Time.deltaTime);
+            player.Cube.transform.Translate(speed * Input.GetAxis(player.x) * Time.deltaTime, speed * Input.GetAxis(player.y) * Time.deltaTime, 0);
+
         }
+        
     }
 }
