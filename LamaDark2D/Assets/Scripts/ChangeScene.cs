@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuScript : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
-    public static void ChangeScene(string sceneName)
+    public static void ChangesScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
