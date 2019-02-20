@@ -133,7 +133,7 @@ Rigidbody2D:
   m_Mass: 3.0218456
   m_LinearDrag: 1
   m_AngularDrag: 1
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -155,8 +155,8 @@ MonoBehaviour:
   Health: 100
   Cube: {fileID: 12839799}
   IsAlive: 1
-  x: 0
-  y: 0
+  x: Horizontal
+  y: Vertical
   Team: {fileID: 0}
 --- !u!114 &12839804
 MonoBehaviour:
@@ -2382,7 +2382,7 @@ Rigidbody2D:
   m_Mass: 3.415436
   m_LinearDrag: 1
   m_AngularDrag: 1
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2404,8 +2404,8 @@ MonoBehaviour:
   Health: 100
   Cube: {fileID: 1620285688}
   IsAlive: 1
-  x: 0
-  y: 0
+  x: Horizontal2
+  y: Vertical2
   Team: {fileID: 1082630047}
 --- !u!114 &1620285693
 MonoBehaviour:
@@ -2447,6 +2447,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4385705, y: 2.3741875}
   m_EdgeRadius: 0
+--- !u!114 &1620285695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620285688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce9d2c8e7c66af42801377f6fea4494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 1620285692}
+  player2: {fileID: 12839801}
+  push: 4
+  pull: 3
+  keypush: 306
+  keypull: 304
 --- !u!1 &1738409929
 GameObject:
   m_ObjectHideFlags: 0
