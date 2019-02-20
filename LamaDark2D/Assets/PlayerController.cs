@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Player player;
 
     private float timer;
+    private Boolean WallCollision = false;
 
     public float speed;
 
@@ -75,9 +76,24 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (player.IsAlive)
+        if (player.IsAlive && !WallCollision)
         {
             rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
         }
+    }
+
+
+    public void OnTriggerStay2D(Collider other)
+    {
+        
+            if (other.gameObject.tag == "WallObject")
+            {
+                WallCollision = true;
+            }
+            else
+            {
+                WallCollision = false;
+            }
+        
     }
 }
