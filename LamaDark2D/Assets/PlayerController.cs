@@ -9,25 +9,19 @@ public class PlayerController : MonoBehaviour
     public Player player;
 
     private float timer;
-    private Boolean WallCollision = false;
+
+    private bool WallCollision = false;
 
     public float speed;
-
-    private Rigidbody2D rb;
-    private Vector2 moveVelocity;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        moveVelocity = moveInput.normalized * speed;
-
         timer += Time.deltaTime;
 
         if (timer >= 0.15f)
@@ -78,8 +72,10 @@ public class PlayerController : MonoBehaviour
     {
         if (player.IsAlive && !WallCollision)
         {
-            rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+            player.Cube.transform.Translate(speed * Input.GetAxis(player.x) * Time.deltaTime, speed * Input.GetAxis(player.y) * Time.deltaTime, 0);
+
         }
+        
     }
 
 
