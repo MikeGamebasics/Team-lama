@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void OnTriggerStay2D(Collider2D other)
+    public void OnTriggerStay2D(Collider other)
     {
         
             if (other.gameObject.tag == "WallObject")
