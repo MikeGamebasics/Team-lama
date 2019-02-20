@@ -16,14 +16,14 @@ public class moveSelectController1 : MonoBehaviour
         if (Input.GetKeyDown("left"))
         {
             Vector2 position = this.transform.position;
-            position.x = -3;
+            position.x = (330);
             this.transform.position = position;
         }
 
         if (Input.GetKeyDown("right"))
         {
             Vector2 position = this.transform.position;
-            position.x = +3;
+            position.x = (730);
             this.transform.position = position;
         }
     }

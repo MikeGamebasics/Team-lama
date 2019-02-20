@@ -223,6 +223,7 @@ RectTransform:
   m_Children:
   - {fileID: 665310363}
   - {fileID: 1989668772}
+  - {fileID: 1928290409}
   m_Father: {fileID: 2032971610}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -465,6 +466,212 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bac379d81067416c93ca04b9ef37322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1928290408
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 129392834}
+    m_Modifications:
+    - target: {fileID: 1611767865221905774, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Name
+      value: flavorText
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_Text
+      value: "The old tales speak of a great battle between the two great races. One
+        who shines in the light and the other who bathes in the darkness. Ones weakness
+        was the others strength and so the battle was one of deception and swiftness.
+        If one could move one towards the dark or push one towards the light, their
+        bodies wouldn\u2019t hold together. They would simply perish if one wasn\u2019t
+        made for it. The race of darkness was often known as \u2018Vampires\u2019
+        whereas the ones who battled such creatures were named \u2018Hunters\u2019.
+        Though the tales say the Hunters won, vampires were deceptive creatures. Tales
+        are often told by the victors and in this case.. \n\nWhich truth is more convenient
+        to be told?\n\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 447b26f3d446644e78f81e39d6217a38, type: 3}
+--- !u!224 &1928290409 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1928290408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1928290410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1611767865221905774, guid: 447b26f3d446644e78f81e39d6217a38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1928290408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1928290411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928290410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!111 &1928290412
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928290410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c2f52fd51b027457e9d2158e4817fb68, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c2f52fd51b027457e9d2158e4817fb68, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1989668771
 GameObject:
   m_ObjectHideFlags: 0
