@@ -541,7 +541,7 @@ PrefabInstance:
     - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -500
+      value: -600
       objectReference: {fileID: 0}
     - target: {fileID: 707244612436353638, guid: 447b26f3d446644e78f81e39d6217a38,
         type: 3}
@@ -615,7 +615,7 @@ PrefabInstance:
         whereas the ones who battled such creatures were named \u2018Hunters\u2019.
         Though the tales say the Hunters won, vampires were deceptive creatures. Tales
         are often told by the victors and in this case.. \n\nWhich truth is more convenient
-        to be told?\n\n"
+        to be told?\n\nPress SPACE to continue\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 4880557400889848794, guid: 447b26f3d446644e78f81e39d6217a38,
         type: 3}
@@ -669,7 +669,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: c2f52fd51b027457e9d2158e4817fb68, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &1989668771
