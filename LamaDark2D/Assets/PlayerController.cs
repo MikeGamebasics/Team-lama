@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     public Player player;
 
-    private float timer;
+    private float HealTimer;
+    private float DamageTimer;
 
     private bool WallCollision = false;
 
@@ -22,74 +23,92 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= 0.15f)
+        if (player.Cube.tag == "Hunter")
         {
-            var t = player.Cube.transform.position.x;
-
-            if (player.Team.Inverteddamage)
+            if (player.collision)
             {
-                t *= -1;
+                DoHeal();
             }
-
-            if (t <= -1)
+            else
             {
-                ;
-                if (player.Health <= 0 || (player.Health - 2) <= 0)
-                {
-                    player.Health = 0;
-                    player.IsAlive = false;
-                    player.Cube.GetComponent<Renderer>().material.color = Color.black;
-                }
-                else
-                {
-                    var damage = (int)Math.Round(2f * (t * -1) / 5);
-                    player.Health -= damage;
-                }
-
+                DoDamage();
             }
-            else if (t >= 1)
-            {
-                if (player.Health >= 100 || (player.Health += 1) >= 100)
-                {
-                    player.Health = 100;
-                }
-                else
-                {
-                    player.Health += (int)Math.Round(1f * t / 5);
-                }
-
-
-
-            }
-            timer = 0;
         }
-
+        else
+        {
+            if (player.collision)
+            {
+                DoDamage();
+            }
+            else
+            {
+                DoHeal();
+            }
+        }
     }
 
     void FixedUpdate()
     {
-        if (player.IsAlive && !WallCollision)
+        if (player.IsAlive)
         {
             player.Cube.transform.Translate(speed * Input.GetAxis(player.x) * Time.deltaTime, speed * Input.GetAxis(player.y) * Time.deltaTime, 0);
 
         }
-        
+
     }
 
 
     public void OnTriggerStay2D(Collider2D other)
     {
-        
-            if (other.gameObject.tag == "WallObject")
+        if (other.gameObject.tag == "spot")
+        {
+            player.collision = true;
+        }
+    }
+
+    private void DoDamage()
+    {
+        player.collision = false;
+        DamageTimer += Time.deltaTime;
+
+        if (DamageTimer >= 0.15f)
+        {
+
+            if (player.Health <= 0 || (player.Health - 2) <= 0)
             {
-                WallCollision = true;
+                player.Health = 0;
+                player.IsAlive = false;
+                player.Cube.GetComponent<Renderer>().material.color = Color.black;
             }
             else
             {
-                WallCollision = false;
+                player.Health -= 2;
             }
-        
+
+
+
+            DamageTimer = 0;
+        }
+    }
+
+    private void DoHeal()
+    {
+        player.collision = false;
+        HealTimer += Time.deltaTime;
+
+        if (HealTimer >= 0.15f)
+        {
+
+            if (player.Health >= 100 || (player.Health += 1) >= 100)
+            {
+                player.Health = 100;
+            }
+            else
+            {
+                player.Health += 1;
+            }
+            HealTimer = 0;
+        }
+
     }
 }

@@ -16,7 +16,7 @@ namespace Assets
         public bool IsAlive = true;
         public string x;
         public string y;
-        public Team Team;
+        public bool collision;
 
 
     }

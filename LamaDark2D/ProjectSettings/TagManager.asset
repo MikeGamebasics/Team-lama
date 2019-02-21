@@ -7,6 +7,7 @@ TagManager:
   - WallObject
   - Vampire
   - Hunter
+  - spot
   layers:
   - Default
   - TransparentFX
