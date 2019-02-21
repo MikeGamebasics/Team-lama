@@ -54,7 +54,7 @@ public class PullController : MonoBehaviour
     void Push(GameObject player, GameObject target, float distanceToStop, float distanceMax, float speed)
     {
 
-        if (Vector3.Distance(player1.Cube.transform.position, target.transform.position) > distanceToStop && Vector3.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
+        if (Vector2.Distance(player1.Cube.transform.position, target.transform.position) > distanceToStop && Vector2.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
         {
             
             Vector2 direction = target.transform.position - player.transform.position;
@@ -69,7 +69,7 @@ public class PullController : MonoBehaviour
     void Pull(GameObject player, GameObject target, float distanceToStop, float distanceMax, float speed)
     {
 
-        if (Vector3.Distance(player1.Cube.transform.position, target.transform.position) > distanceToStop && Vector3.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
+        if (Vector2.Distance(player1.Cube.transform.position, target.transform.position) > distanceToStop && Vector2.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
         {
 
             Vector2 direction = target.transform.position - player.transform.position;
