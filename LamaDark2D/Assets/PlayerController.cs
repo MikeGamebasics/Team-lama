@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     private float HealTimer;
     private float DamageTimer;
+    private GameObject particle;
 
     public float speed;
     Text PlayerHP;
@@ -94,6 +95,9 @@ public class PlayerController : MonoBehaviour
             else
             {
                 player.Health -= 2;
+                particle = Instantiate(player.Particle) as GameObject;
+                particle.transform.position = player.transform.position;
+                
             }
 
 

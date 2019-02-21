@@ -13,6 +13,7 @@ namespace Assets
         public string PlayerName;
         public int Health = 100;
         public GameObject Cube;
+        public GameObject Particle;
         public bool IsAlive = true;
         public string x;
         public string y;
