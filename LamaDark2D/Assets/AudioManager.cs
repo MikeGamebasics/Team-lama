@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
             sound.source.loop = sound.loop;
         }
     }    // Start is called before the first frame update
-    void Play(string name)
+   public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
