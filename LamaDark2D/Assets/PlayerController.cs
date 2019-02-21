@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Assets;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float DamageTimer;
 
     public float speed;
+    Text PlayerHP;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,9 @@ public class PlayerController : MonoBehaviour
     {
         if (player.Cube.tag == "Hunter")
         {
+            PlayerHP = GameObject.Find("P1HP").GetComponent<Text>();
+            PlayerHP.text = player.Health.ToString() + "%";
+
             if (player.collision)
             {
                 DoHeal();
@@ -34,6 +39,9 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            PlayerHP = GameObject.Find("P2HP").GetComponent<Text>();
+            PlayerHP.text = player.Health.ToString() + "%";
+
             if (player.collision)
             {
                 DoDamage();
@@ -43,6 +51,7 @@ public class PlayerController : MonoBehaviour
                 DoHeal();
             }
         }
+
     }
 
     void FixedUpdate()
