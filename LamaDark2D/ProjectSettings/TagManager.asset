@@ -46,3 +46,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: arm_l
+    uniqueID: 2287757891
+    locked: 0
+  - name: leg_l
+    uniqueID: 1283416581
+    locked: 0
+  - name: leg_r
+    uniqueID: 3124114999
+    locked: 0
+  - name: body
+    uniqueID: 3596170193
+    locked: 0
+  - name: head
+    uniqueID: 2124273789
+    locked: 0
+  - name: arm_r
+    uniqueID: 614035215
+    locked: 0
