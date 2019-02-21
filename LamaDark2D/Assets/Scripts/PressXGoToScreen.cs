@@ -40,7 +40,7 @@ public class PressXGoToScreen : MonoBehaviour
 
         if (animateTextIsDone && Input.GetKeyDown("space"))
         {
-            ChangesScene("PlayerSelect");
+            ChangesScene("GamePlay");
         }
 
         void ChangesScene(string sceneName)
