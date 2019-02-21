@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
             UpdatePlayerHealth("P1HP");
         }
-        else if(player.Cube.tag =="Vampire")
+        else if (player.Cube.tag == "Vampire")
         {
 
 
@@ -83,29 +83,33 @@ public class PlayerController : MonoBehaviour
 
     private void DoDamage()
     {
-        player.collision = false;
-        DamageTimer += Time.deltaTime;
-
-        if (DamageTimer >= 0.15f)
+        if (player.IsAlive)
         {
+            player.collision = false;
+            DamageTimer += Time.deltaTime;
 
-            if (player.Health <= 0 || (player.Health - 2) <= 0)
+            if (DamageTimer >= 0.15f)
             {
-                player.Health = 0;
-                player.IsAlive = false;
-                player.Cube.GetComponent<Renderer>().material.color = Color.black;
+
+                if (player.Health <= 0 || (player.Health - 2) <= 0)
+                {
+                    player.Health = 0;
+                    player.IsAlive = false;
+                    player.Cube.GetComponent<Renderer>().material.color = Color.black;
+                    PlayDeathSound();
+                }
+                else
+                {
+                    player.Health -= 2;
+                    particle = Instantiate(player.Particle) as GameObject;
+                    particle.transform.position = player.transform.position;
+
+                }
+
+
+
+                DamageTimer = 0;
             }
-            else
-            {
-                player.Health -= 2;
-                particle = Instantiate(player.Particle) as GameObject;
-                particle.transform.position = player.transform.position;
-                
-            }
-
-
-
-            DamageTimer = 0;
         }
     }
 
@@ -116,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
         if (player.IsAlive)
         {
-            if (HealTimer >= 0.15f)
+            if (HealTimer >= 0.9f)
             {
 
                 if (player.Health >= 100 || (player.Health += 1) >= 100)
@@ -161,9 +165,21 @@ public class PlayerController : MonoBehaviour
         }
         else if (oldNumber > player.Health)
         {
-           color = Color.red;
+            color = Color.red;
         }
         else color = Color.white;
         return color;
+    }
+
+    private void PlayDeathSound()
+    {
+        if (player.Cube.tag == "Vampire")
+        {
+            FindObjectOfType<AudioManager>().Play("Death");
+        }
+        else if (player.Cube.tag == "Hunter")
+        {
+            FindObjectOfType<AudioManager>().Play("Consuela");
+        }
     }
 }
