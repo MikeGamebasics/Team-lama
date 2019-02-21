@@ -9,17 +9,15 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/PLayerSelect.unity
-    guid: 945762a23d32741e9ab67f4b172ccd4e
+    path: Assets/Scenes/StartGame.unity
+    guid: 1f6361de94cd049a692712b308ff7ff4
   - enabled: 1
     path: Assets/Scenes/GamePlay.unity
     guid: 91f97c62de5374149833f560e771e481
   - enabled: 1
-    path: Assets/Scenes/StartGame.unity
-    guid: 1f6361de94cd049a692712b308ff7ff4
-  - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: d8702eb235e794d35a71b916e170c1c3
-  - enabled: 1
-   
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

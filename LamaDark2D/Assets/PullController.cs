@@ -34,7 +34,7 @@ public class PullController : MonoBehaviour
         {
             if (Pushtimer >= 1f)
             {
-                Push(player1.Cube, player2.Cube, 0.2f, 2f, push);
+                Push(player1.Cube, player2.Cube, 0.2f, 10f, push);
                 Pushtimer = 0f;
             }
          
@@ -44,7 +44,7 @@ public class PullController : MonoBehaviour
         {
             if (Pulltimer >= 1f)
             {
-                Pull(player1.Cube, player2.Cube, 0.2f, 4f, pull);
+                Pull(player1.Cube, player2.Cube, 0.2f, 10f, pull);
                 Pulltimer = 0f;
             }
         }
@@ -53,31 +53,22 @@ public class PullController : MonoBehaviour
 
     void Push(GameObject player, GameObject target, float distanceToStop, float distanceMax, float speed)
     {
-
-        if (Vector2.Distance(player1.Cube.transform.position, target.transform.position) > distanceToStop && Vector2.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
+        
+        if (Vector3.Distance(player.transform.position, target.transform.position) > distanceToStop && Vector3.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
         {
-            
-            Vector2 direction = target.transform.position - player.transform.position;
-            Debug.Log(direction);
-            var rigidbody = target.GetComponent<Rigidbody2D>();
-            Debug.Log(direction * speed);
-            Debug.Log(rigidbody);
-            rigidbody.AddForce(direction * speed, ForceMode2D.Impulse);
+            Debug.Log("Push");
+            target.transform.position = Vector3.MoveTowards(player.transform.position * -1, target.transform.position * -1, speed * Time.deltaTime);target.transform.position = Vector3.MoveTowards(target.transform.position, player.transform.position, speed * Time.deltaTime);
+            //Vector2 direction = target.transform.position - player.transform.position;
+            //target.transform.Translate(direction.x * speed * Time.deltaTime, direction.y * speed * Time.deltaTime, 0);
         }
     }
 
     void Pull(GameObject player, GameObject target, float distanceToStop, float distanceMax, float speed)
     {
 
-        if (Vector2.Distance(player1.Cube.transform.position, target.transform.position) > distanceToStop && Vector2.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
+        if (Vector2.Distance(player.transform.position, target.transform.position) > distanceToStop && Vector2.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
         {
-
-            Vector2 direction = target.transform.position - player.transform.position;
-            Debug.Log(direction);
-            var rigidbody = target.GetComponent<Rigidbody2D>();
-            Debug.Log(direction * speed);
-            Debug.Log(rigidbody);
-            rigidbody.AddForce((direction * speed) * -1, ForceMode2D.Impulse);
+            target.transform.position = Vector3.MoveTowards(target.transform.position, player.transform.position, speed * Time.deltaTime);
         }
     }
 }
