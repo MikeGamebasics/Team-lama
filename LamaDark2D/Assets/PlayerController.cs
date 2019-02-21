@@ -11,13 +11,18 @@ public class PlayerController : MonoBehaviour
 
     private float HealTimer;
     private float DamageTimer;
+    private float ChangeColorTimer;
 
     public float speed;
     Text PlayerHP;
+    private string whichPlayerHP;
+    Color PlayerHPColor;
+    int OldPlayerHP;
 
     // Start is called before the first frame update
     void Start()
     {
+        OldPlayerHP = 100;
     }
 
     // Update is called once per frame
@@ -36,8 +41,7 @@ public class PlayerController : MonoBehaviour
                 DoDamage();
             }
 
-            PlayerHP = GameObject.Find("P1HP").GetComponent<Text>();
-            PlayerHP.text = player.Health.ToString() + "%";
+            UpdatePlayerHealth("P1HP");
         }
         else if(player.Cube.tag =="Vampire")
         {
@@ -52,8 +56,7 @@ public class PlayerController : MonoBehaviour
                 DoHeal();
             }
 
-            PlayerHP = GameObject.Find("P2HP").GetComponent<Text>();
-            PlayerHP.text = player.Health.ToString() + "%";
+            UpdatePlayerHealth("P2HP");
         }
 
     }
@@ -124,5 +127,39 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    private void UpdatePlayerHealth(string whichPlayerHP)
+    {
+        PlayerHP = GameObject.Find(whichPlayerHP).GetComponent<Text>();
+        PlayerHP.text = player.Health.ToString() + "%";
+
+        ChangeColorTimer += Time.deltaTime;
+
+        if (player.IsAlive)
+        {
+            if (ChangeColorTimer >= 0.15f)
+            {
+                PlayerHP.color = ChangePlayerHPColor(OldPlayerHP);
+                ChangeColorTimer = 0;
+                OldPlayerHP = player.Health;
+            }
+        }
+
+    }
+
+    private Color ChangePlayerHPColor(int oldNumber)
+    {
+        Color color;
+        if (oldNumber < player.Health)
+        {
+            color = Color.green;
+        }
+        else if (oldNumber > player.Health)
+        {
+           color = Color.red;
+        }
+        else color = Color.white;
+        return color;
     }
 }
