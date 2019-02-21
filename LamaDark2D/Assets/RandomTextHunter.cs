@@ -10,8 +10,8 @@ public class RandomTextHunter : MonoBehaviour
     public static string randomHunterText;
 
     //insert random text here
-    string[] randomHunterTexts = { "What are you doing?", "Git Gud", "you weakling", "You can't defeat me!", "Is this all?", "Nani, the Fuck?", "Come at me bro", "I will hunt you down",
-    "Burn!!" };
+    string[] randomHunterTexts = { "What are you doing?", "Git Gud", "You weakling", "You can't defeat me!", "Is this all?", "Nani, the Fuck?", "Come at me bro", "I will hunt you down",
+    "Burn!!", "Party time", "I can't see shit", "Let me stake you", "Demon spawn" , "Die already!"};
 
     // Start is called before the first frame update
     void Start()

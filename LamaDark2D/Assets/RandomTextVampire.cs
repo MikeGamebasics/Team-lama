@@ -11,7 +11,7 @@ public class RandomTextVampire : MonoBehaviour
 
     //insert random text here
     string[] randomVampireTexts = { "You suck more than me", "Git Gud", "you weakling", "You can't defeat me!", "Is this all?", "Nani, the Fuck?",
-    "Get over here", "Die!!!", "Are you bleeding?", "Stay away from the light", "Come to the darkness", "I will bite you" };
+    "Get over here", "Die!!!", "Are you bleeding?", "Stay away from the light", "Come to the darkness", "I will bite you", "Are you sorry?!" };
 
     // Start is called before the first frame update
     void Start()
