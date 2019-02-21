@@ -25,31 +25,35 @@ public class PlayerController : MonoBehaviour
     {
         if (player.Cube.tag == "Hunter")
         {
+
+
+            if (player.collision)
+            {
+                DoHeal();
+            }
+            else
+            {
+                DoDamage();
+            }
+
             PlayerHP = GameObject.Find("P1HP").GetComponent<Text>();
             PlayerHP.text = player.Health.ToString() + "%";
+        }
+        else if(player.Cube.tag =="Vampire")
+        {
+
 
             if (player.collision)
             {
-                DoHeal();
+                DoDamage();
             }
             else
             {
-                DoDamage();
+                DoHeal();
             }
-        }
-        else
-        {
+
             PlayerHP = GameObject.Find("P2HP").GetComponent<Text>();
             PlayerHP.text = player.Health.ToString() + "%";
-
-            if (player.collision)
-            {
-                DoDamage();
-            }
-            else
-            {
-                DoHeal();
-            }
         }
 
     }
@@ -103,18 +107,21 @@ public class PlayerController : MonoBehaviour
         player.collision = false;
         HealTimer += Time.deltaTime;
 
-        if (HealTimer >= 0.15f)
+        if (player.IsAlive)
         {
+            if (HealTimer >= 0.15f)
+            {
 
-            if (player.Health >= 100 || (player.Health += 1) >= 100)
-            {
-                player.Health = 100;
+                if (player.Health >= 100 || (player.Health += 1) >= 100)
+                {
+                    player.Health = 100;
+                }
+                else
+                {
+                    player.Health += 1;
+                }
+                HealTimer = 0;
             }
-            else
-            {
-                player.Health += 1;
-            }
-            HealTimer = 0;
         }
 
     }
