@@ -11,8 +11,6 @@ public class PlayerController : MonoBehaviour
     private float HealTimer;
     private float DamageTimer;
 
-    private bool WallCollision = false;
-
     public float speed;
 
     // Start is called before the first frame update
