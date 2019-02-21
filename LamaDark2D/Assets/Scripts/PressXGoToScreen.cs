@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PressXGoToScreen : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class PressXGoToScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
         if (Input.GetKeyDown("space") && !animateTextIsDone)
         {
             animationStarted = true;
