@@ -22,9 +22,6 @@ public class RandomTextVampire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion newRotation = GetComponent<TextMesh>().transform.rotation;
-        newRotation.y = 0;
-        GetComponent<TextMesh>().transform.rotation = newRotation;
 
         intervalSinceLastUpdate += Time.deltaTime;
         if (intervalSinceLastUpdate >= intervalBetweenTexts)
