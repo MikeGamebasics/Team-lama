@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomTextHunter : MonoBehaviour
+public class RandomTextVampire : MonoBehaviour
 {
     public float showTextDuration;
     public float intervalBetweenTexts;
     float intervalSinceLastUpdate;
-    public static string randomHunterText;
+    public static string randomVampireText;
 
     //insert random text here
-    string[] randomHunterTexts = { "What are you doing?", "Git Gud", "you weakling", "You can't defeat me!", "Is this all?", "Nani, the Fuck?", "Come at me bro", "I will hunt you down",
-    "Burn!!" };
+    string[] randomVampireTexts = { "You suck more than me", "Git Gud", "you weakling", "You can't defeat me!", "Is this all?", "Nani, the Fuck?",
+    "Get over here", "Die!!!", "Are you bleeding?", "Stay away from the light", "Come to the darkness", "I will bite you" };
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,10 @@ public class RandomTextHunter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Quaternion newRotation = GetComponent<TextMesh>().transform.rotation;
+        newRotation.y = 0;
+        GetComponent<TextMesh>().transform.rotation = newRotation;
+
         intervalSinceLastUpdate += Time.deltaTime;
         if (intervalSinceLastUpdate >= intervalBetweenTexts)
         {
@@ -35,11 +39,11 @@ public class RandomTextHunter : MonoBehaviour
     void AppointRandomText()
     {
         //gets a random index number
-        int randomIndex = Mathf.FloorToInt(Random.Range(0, randomHunterTexts.Length));
-        randomHunterText = randomHunterTexts[randomIndex];
+        int randomIndex = Mathf.FloorToInt(Random.Range(0, randomVampireTexts.Length));
+        randomVampireText = randomVampireTexts[randomIndex];
 
         //shows text above player. N is needed so it is indeed above the player
-        GetComponent<TextMesh>().text = randomHunterText + "\n\n\n\n\n";
+        GetComponent<TextMesh>().text = randomVampireText + "\n\n\n\n\n";
     }
 
 
