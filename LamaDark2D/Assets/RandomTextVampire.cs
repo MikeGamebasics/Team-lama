@@ -24,7 +24,7 @@ public class RandomTextVampire : MonoBehaviour
     {
         Quaternion newRotation = GetComponent<TextMesh>().transform.rotation;
         newRotation.y = 0;
-        GetComponentInChildren<TextMesh>().transform.rotation = newRotation;
+        GetComponent<TextMesh>().transform.rotation = newRotation;
 
         intervalSinceLastUpdate += Time.deltaTime;
         if (intervalSinceLastUpdate >= intervalBetweenTexts)
