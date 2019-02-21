@@ -1,17 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class GameOver : MonoBehaviour
+public class Restart : MonoBehaviour
 {
-    bool GameHasEnded = false;
-    public Player playerOne;
-    public Player playerTwo;
-    //Text winnerTxt;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +13,10 @@ public class GameOver : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-
     {
-        if (playerOne.Health == 0 || playerTwo.Health == 0)
+        if (Input.GetKeyDown("space"))
         {
-
-            GameHasEnded = true;
-        }
-
-        if (GameHasEnded)
-        {
-            ChangesScene("EndGame");
+            ChangesScene("GamePlay");
         }
 
         void ChangesScene(string sceneName)
