@@ -154,6 +154,7 @@ MonoBehaviour:
   PlayerName: name
   Health: 100
   Cube: {fileID: 12839799}
+  Particle: {fileID: 0}
   IsAlive: 1
   x: HorizontalKey1
   y: VerticalKey1
@@ -324,7 +325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -299.6, y: 178.2}
+  m_AnchoredPosition: {x: 500, y: 178.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22409803
@@ -794,7 +795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -300, y: 120}
+  m_AnchoredPosition: {x: 500, y: 120}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202686507
@@ -3398,7 +3399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -170.1, y: 120}
+  m_AnchoredPosition: {x: 630, y: 120}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1501599243
@@ -3544,6 +3545,7 @@ MonoBehaviour:
   PlayerName: name2
   Health: 100
   Cube: {fileID: 1620285688}
+  Particle: {fileID: 0}
   IsAlive: 1
   x: HorizontalKey2
   y: VerticalKey2
