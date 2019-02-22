@@ -31,14 +31,18 @@ public class GameOver : MonoBehaviour
     {
         if (playerOne.Health == 0 && !vampireIsDead) 
         {
+            anim1.applyRootMotion = false;
             hunterIsDead = true;
-            anim1.SetBool("isHunterDead", true);
+            anim1.Play("death_hunter");
+            anim1.SetTrigger("deathHunter");
         }
 
         if (playerTwo.Health == 0 && !hunterIsDead)
         {
+            anim2.applyRootMotion = false;
             vampireIsDead = true;
-            anim2.SetBool("isVampireDead", true);
+            anim2.Play("death_vampire");
+            anim2.SetTrigger("deathExit");
 
         }
 
