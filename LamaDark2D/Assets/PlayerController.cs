@@ -20,9 +20,13 @@ public class PlayerController : MonoBehaviour
     Color PlayerHPColor;
     int OldPlayerHP;
 
+    private Animator anim;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         OldPlayerHP = 100;
     }
 
@@ -88,7 +92,7 @@ public class PlayerController : MonoBehaviour
             player.collision = false;
             DamageTimer += Time.deltaTime;
 
-            if (DamageTimer >= 0.15f)
+            if (DamageTimer >= 0.3f)
             {
 
                 if (player.Health <= 0 || (player.Health - 2) <= 0)
@@ -115,14 +119,13 @@ public class PlayerController : MonoBehaviour
 
     private void DoHeal()
     {
-        player.collision = false;
         HealTimer += Time.deltaTime;
 
         if (player.IsAlive)
         {
             if (HealTimer >= 0.9f)
             {
-
+                player.collision = false;
                 if (player.Health >= 100 || (player.Health += 1) >= 100)
                 {
                     player.Health = 100;

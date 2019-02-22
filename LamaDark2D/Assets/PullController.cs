@@ -18,10 +18,14 @@ public class PullController : MonoBehaviour
     private float Pushtimer;
 
     private float Pulltimer;
+
+
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,10 +38,12 @@ public class PullController : MonoBehaviour
         {
             if (Pushtimer >= 1f)
             {
+                anim.SetBool("isPushing", true);
                 Push(player1.Cube, player2.Cube, 0f, 1.5f, push);
                 Pushtimer = 0f;
                 FindObjectOfType<AudioManager>().Play("Push");
-            }
+                anim.SetBool("isPushing", false);
+}
 
         }
 
@@ -59,10 +65,7 @@ public class PullController : MonoBehaviour
         if (Vector3.Distance(player.transform.position, target.transform.position) > distanceToStop && Vector3.Distance(player1.Cube.transform.position, target.transform.position) < distanceMax)
         {
             var direction = player.transform.position - target.transform.position;
-
             target.transform.position += direction.normalized * speed * Time.deltaTime * -1 * 5;
-            Debug.Log("Push");
-            //    target.transform.position = Vector3.MoveTowards(player.transform.position , target.transform.position, speed * Time.deltaTime * -1);
         }
     }
 
