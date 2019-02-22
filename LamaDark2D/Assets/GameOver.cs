@@ -20,7 +20,7 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = playerOne.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,14 +29,14 @@ public class GameOver : MonoBehaviour
     {
         if (playerOne.Health == 0) 
         {
-            //anim.isVampireDead = true;
             vampireIsDead = true;
+            anim.SetBool("isVampireDead", true);
         }
 
         if (playerTwo.Health == 0)
         {
-            //anim.isHunterDead = true;
             hunterIsDead = true;
+            anim.SetBool("isHunterDead", true);
         }
 
 
@@ -62,8 +62,8 @@ public class GameOver : MonoBehaviour
         if (GameHasEnded)
         {
             ChangesScene("EndGame");
-            //anim.isVampireDead = false;
-            //anim.isHunterDead = false;
+            //anim.SetBool("isVampireDead", false);
+            //anim.SetBool("isVampireDead", false);
         }
 
         void ChangesScene(string sceneName)
