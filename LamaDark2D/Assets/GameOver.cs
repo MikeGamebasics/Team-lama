@@ -47,9 +47,9 @@ public class GameOver : MonoBehaviour
             Text changeWinnerTxt = winnerTxt.GetComponent<Text>();
             if (vampireIsDead)
                 { 
-                changeWinnerTxt.text = "The winner is: VAMPIRE!"; 
+                changeWinnerTxt.text = "The winner is: VAMPIRE! \n\nPress SPACE to continue" ; 
                 }
-            else changeWinnerTxt.text = "The winner is: HUNTER!";
+            else changeWinnerTxt.text = "The winner is: HUNTER! \n\nPress SPACE to continue" ;
 
             winnerTxtIsShown = true;
         }
