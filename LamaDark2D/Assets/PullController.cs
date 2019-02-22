@@ -36,8 +36,9 @@ public class PullController : MonoBehaviour
             {
                 Push(player1.Cube, player2.Cube, 0.2f, 10f, push);
                 Pushtimer = 0f;
+                FindObjectOfType<AudioManager>().Play("Push");
             }
-         
+
         }
 
         if (Input.GetKeyDown(keypull))
@@ -46,6 +47,7 @@ public class PullController : MonoBehaviour
             {
                 Pull(player1.Cube, player2.Cube, 0.2f, 10f, pull);
                 Pulltimer = 0f;
+                FindObjectOfType<AudioManager>().Play("Pull");
             }
         }
 
