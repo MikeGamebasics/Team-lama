@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
             player.collision = false;
             DamageTimer += Time.deltaTime;
 
-            if (DamageTimer >= 0.3f)
+            if (DamageTimer >= 0.1f)
             {
 
                 if (player.Health <= 0 || (player.Health - 2) <= 0)
